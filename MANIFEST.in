@@ -1,0 +1,5 @@
+recursive-include data *.npy
+recursive-include notebooks *.ipynb
+recursive-include notebooks *.png
+recursive-include src *.py
+recursive-include tests *.py
