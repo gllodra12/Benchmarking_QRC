@@ -97,7 +97,7 @@ def ham_to_matrix(hamiltonian, particle, dimensions, raising_error):
         hamiltonian (BosonOperator or FermionOperator): Hamiltonian in symbolic form using openfermion operators.
         particle (BosonOperator or FermionOperator): Particle is a boson or a fermion
         dimensions (int, optional): Number of particles on the same site (dim_boson=n, dim_fermion=2).
-        raising_error (bool, optional): Checks if the hamiltonian is hermitian.
+        raising_error (bool, optional): Check if the hamiltonian is hermitian.
 
     Returns:
         sparse.csc: hamiltonian in matrix form
@@ -117,7 +117,7 @@ def ham_to_matrix(hamiltonian, particle, dimensions, raising_error):
 
 
 def get_coefficients(n_particles, coef_range=None, coef_onsites=None, coef_couplings=None, seed=None):
-    """Generates a array with the onsite coefficients J_ii and the coupling coefficients J_ij.
+    """Generates an array with the onsite coefficients J_ii and the coupling coefficients J_ij.
     This seed will also generate the sequence of signal values that will be injected into the reservoir.
 
     Args:
@@ -136,7 +136,7 @@ def get_coefficients(n_particles, coef_range=None, coef_onsites=None, coef_coupl
     if coef_range:
         if len(coef_range) != 2:
             raise ValueError(
-                "Amp range must contain only 2 values. First value must be the lowest and the second value the highest to be generated."
+                "Amp range must contain only 2 values. The first value must be the lowest and the second value the highest to be generated."
             )
         if coef_onsites or coef_couplings:
             raise NameError(
