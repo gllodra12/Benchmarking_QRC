@@ -2,8 +2,8 @@
 data/
 venv/
 notebooks/.ipynb_checkpoints
-notebooks/images
-notebooks/Tutorial.ipynb
+#notebooks/images
+#notebooks/Tutorial.ipynb
 .vscode
 
 # User txt files
