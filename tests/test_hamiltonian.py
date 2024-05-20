@@ -170,7 +170,7 @@ def test_get_coefficients(n_particles, coef_range, coef_onsites, coef_couplings,
             None,
             None,
             3,
-            "Amp range must contain only 2 values. First value must be the lowest and the second value the highest to be generated.",
+            "Amp range must contain only 2 values. The first value must be the lowest and the second value the highest to be generated.",
         ),
         (
             3,
@@ -187,4 +187,6 @@ def test_get_coefficients_errors(n_particles, coef_range, coef_onsites, coef_cou
     with pytest.raises(ValueError) as excinfo:
         get_coefficients(n_particles, coef_range, coef_onsites, coef_couplings, seed)
     (msg,) = excinfo.value.args
+    print(msg)
+    print(exp_msg)
     assert msg == exp_msg

@@ -3,7 +3,7 @@ from itertools import combinations
 import numpy as np
 from openfermion.linalg.sparse_tools import boson_operator_sparse, get_sparse_operator
 from openfermion.ops.operators import BosonOperator, FermionOperator, QubitOperator
-from scipy.linalg import expm
+from scipy.sparse.linalg import eigsh, expm
 
 from benchmarking_qrc.utils import is_unitary
 
