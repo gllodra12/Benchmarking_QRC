@@ -77,8 +77,8 @@ def observables(operator, n_particles, dimensions=2, obs_form="ij"):
             observable = sparse.kron(observable, sparse.identity(dimensions))
             observable_idx += 1
     
-        if observable.imag.sum() > 1e-9:
-        # if np.abs(observable.data.imag).sum() > 1e-9:
+        # if observable.imag.sum() > 1e-9:
+        if np.abs(observable.data.imag).sum() > 1e-9:
             raise ValueError("Unexpected observable operator with imaginary values")
 
         all_observables.append(observable.todense())
